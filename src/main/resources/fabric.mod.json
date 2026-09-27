@@ -4,13 +4,13 @@
   "version": "${version}",
 
   "name": "${name}",
-  "description": "Template for my fabric mods",
+  "description": "Make happy ghasts more controllable",
   "authors": [
-    "Fallen_Breath"
+    "Meteor23333"
   ],
   "contact": {
     "homepage": "https://modrinth.com",
-    "sources": "https://github.com/Fallen-Breath/fabric-mod-template"
+    "sources": "https://github.com/Meteor2333/BetterHappyGhastControl"
   },
   "license": "LGPL-3.0",
 
@@ -19,11 +19,11 @@
   "environment": "*",
   "entrypoints": {
     "main": [
-      "me.fallenbreath.template_mod.TemplateMod::fabricInit"
+      "cc.meteormc.bhgc.BetterHappyGhastControl::fabricInit"
     ]
   },
   "mixins": [
-    "template_mod.mixins.json"
+    "bhgc.mixins.json"
   ],
 
   "depends": {

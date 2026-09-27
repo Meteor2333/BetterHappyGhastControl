@@ -1,12 +1,13 @@
 {
   "required": true,
   "minVersion": "0.8",
-  "package": "me.fallenbreath.template_mod.mixins",
+  "package": "cc.meteormc.bhgc.mixins",
   "compatibilityLevel": "{{COMPATIBILITY_LEVEL}}",
   "mixins": [
-    "MinecraftServerMixin"
+    "HappyGhastMixin"
   ],
   "client": [
+    "OptionsMixin"
   ],
   "injectors": {
     "defaultRequire": 1

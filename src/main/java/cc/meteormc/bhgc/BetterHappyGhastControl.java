@@ -18,8 +18,10 @@
  * along with TemplateMod.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-package me.fallenbreath.template_mod;
+package cc.meteormc.bhgc;
 
+import com.mojang.blaze3d.platform.InputConstants;
+import net.minecraft.client.KeyMapping;
 //#if MC >= 1.18.2
 //$$ import com.mojang.logging.LogUtils;
 //$$ import org.slf4j.Logger;
@@ -28,9 +30,9 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 //#endif
 
-@net.minecraftforge.fml.common.Mod(TemplateMod.MOD_ID)
-@net.neoforged.fml.common.Mod(TemplateMod.MOD_ID)
-public class TemplateMod
+@net.minecraftforge.fml.common.Mod(BetterHappyGhastControl.MOD_ID)
+@net.neoforged.fml.common.Mod(BetterHappyGhastControl.MOD_ID)
+public class BetterHappyGhastControl
 {
 	public static final Logger LOGGER =
 			//#if MC >= 11802
@@ -39,16 +41,29 @@ public class TemplateMod
 			LogManager.getLogger();
 			//#endif
 
-	public static final String MOD_ID = "template_mod";
+	public static final String MOD_ID = "bhgc";
+
+	public static KeyMapping KEY_CONTROL_DOWN;
 
 	public static void fabricInit()
 	{
 		//noinspection InstantiationOfUtilityClass
-		new TemplateMod();
+		new BetterHappyGhastControl();
 	}
 
-	public TemplateMod()
+	public BetterHappyGhastControl()
 	{
 		// common init here
+		KEY_CONTROL_DOWN = new KeyMapping(
+				"Happy Ghast Down",
+				//#if MC >= 260300
+				//$$ InputConstants.Type.KEYBOARD,
+				//#else
+				InputConstants.Type.KEYSYM,
+				//#endif
+				InputConstants.KEY_LALT,
+				KeyMapping.Category.MOVEMENT,
+				Integer.MAX_VALUE
+		);
 	}
 }

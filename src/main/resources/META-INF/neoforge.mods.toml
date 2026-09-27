@@ -1,16 +1,16 @@
 modLoader = "javafml"
 loaderVersion = "[1,)"
 license = "LGPLv3"
-issueTrackerURL = "https://github.com/Fallen-Breath/fabric-mod-template/issues"
+issueTrackerURL = "https://github.com/Meteor2333/BetterHappyGhastControl/issues"
 
 [[mods]]
 modId = "${id}"
 version = "${version}"
 displayName = "${name}"
-displayURL = "https://github.com/Fallen-Breath/fabric-mod-template"
-authors = "Fallen_Breath"
+displayURL = "https://github.com/Meteor2333/BetterHappyGhastControl"
+authors = "Meteor23333"
 description = '''
-Template for my fabric mods
+Make happy ghasts more controllable
 '''
 logoFile = "icon.png"
 
